@@ -88,15 +88,6 @@ rgb* generate_colormap(int* heightmap, int map_width, int map_height) {
 		}
 	}
 
-	/**for (int x = 0; x < map_width; x++) {
-		for (int y = 0; y < map_height; y++) {
-			printf("%d %d %d | ", colormap[y*map_width + x].r, colormap[y*map_width + x].g, colormap[y*map_width + x].b);
-		}
-		printf("\n");
-	}
-
-	getchar();**/
-
 	return colormap;
 
 }
@@ -144,7 +135,6 @@ rgb* render(int* heightmap, rgb* colormap, pos p, int height, int horizon, int s
 	return buffer;
 }
 
-// Should be okay
 void draw(rgb* buffer, int screen_width, int screen_height) {
 	printf("\e[?25l\e[H");
 
@@ -159,7 +149,6 @@ void draw(rgb* buffer, int screen_width, int screen_height) {
 	fflush(stdout);
 }
 
-//Should also be okay
 void fly() {
 	system("clear");
     srand( time(0) );
